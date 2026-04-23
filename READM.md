@@ -136,26 +136,25 @@ The API will be available at: **http://localhost:8000**
 ### 🔐 Authentication
 | Method | Endpoint | Description |
 |---|---|---|
-| POST | `/api/auth/register/` | User registration |
-| POST | `/api/auth/login/` | Login (JWT token) |
-| POST | `/api/auth/logout/` | Logout |
+| POST | `/user/register/` | User registration |
+| POST | `/users/login/` | Login (JWT token) |
+| POST | `/users/refresh/` | Refresh (JWT token) |
+| GET | `/users/list/` | List all users|
 
 ### 📦 Products
 | Method | Endpoint | Description |
 |---|---|---|
-| GET | `/api/products/` | List all products |
-| GET | `/api/products/{id}/` | Get product details |
-| POST | `/api/products/` | Create a product  |
-| PUT | `/api/products/{id}/` | Update a product  |
-| DELETE | `/api/products/{id}/` | Delete a product |
+| GET | `/products/` | List all products |
+| GET | `/products/{id}/` | Get product details |
+| POST | `/products/` | Create a product  |
+| PUT | `/products/{id}/` | Update a product  |
+| DELETE | `//products/{id}/` | Delete a product |
 
 ### Orders
 | Method | Endpoint | Description |
 |---|---|---|
-| GET | `/api/cart/` | View cart |
-| POST | `/api/cart/add/` | Add item to cart |
-| POST | `/api/orders/` | Place an order |
-| GET | `/api/orders/{id}/` | Get order details |
+| POST | `/orders/` | Place an order |
+| GET | `/orders/{id}/` | Get order details |
 
 ---
 
