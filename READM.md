@@ -127,7 +127,15 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-The API will be available at: **http://localhost:8000**
+🔗 Base URL
+https://ecommerces-api3.onrender.com
+
+
+📌 Note
+
+⚠️ The base URL alone returns nothing. This is a REST API, so you must use a specific endpoint.
+To explore all available endpoints and test the API, please visit the documentation :
+👉 https://ecommerces-api3.onrender.com/api/docs/
 
 ---
 
