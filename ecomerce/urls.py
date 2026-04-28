@@ -30,3 +30,9 @@ urlpatterns = [
     path('api/docs',SpectacularSwaggerView.as_view(url_name='schema'),name='swagger'),
     path('api/redoc',SpectacularRedocView.as_view(url_name='schema'),name='redoc'),
 ]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
+if not User.objects.filter(username='admin_lanja').exists():
+    User.objects.create_superuser('admin_lanja', 'admin@example.com', 'TenyMiafina123!')
+    print("Superuser created successfully!")
