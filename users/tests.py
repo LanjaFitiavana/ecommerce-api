@@ -3,7 +3,7 @@ from rest_framework import status
 from django.contrib.auth.models import User
 from django.urls import reverse
 from rest_framework_simplejwt.tokens import RefreshToken
-from .models import UserPofil
+from .models import UserProfil
 from datetime import timedelta
 
 class TestLogin(APITestCase):
@@ -98,7 +98,7 @@ class TestProfilIsowner(APITestCase):
         self.owner = User.objects.create_user('owner',password='pass123',email='owner@gmail.com')
         self.other = User.objects.create_user('other',password='pass34567',email='other@gmail.com')
 
-        self.account = UserPofil.objects.create(
+        self.account = UserProfil.objects.create(
             user = self.owner,
             bio = "i am there",
             adress ="lto pres",

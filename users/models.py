@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-class UserPofil(models.Model):
+class UserProfil(models.Model):
     user = models.OneToOneField(User,on_delete=models.CASCADE,related_name='profil')
     bio = models.TextField(max_length=5000,blank=True)
     adress = models.CharField(max_length=400,blank=True)

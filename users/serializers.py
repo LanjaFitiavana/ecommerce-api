@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from .models import UserPofil
+from .models import UserProfil
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -24,5 +24,5 @@ class ProfilSerializer(serializers.ModelSerializer):
     email = serializers.EmailField(source='user.email',read_only = True,)
 
     class Meta:
-        model = UserPofil
+        model = UserProfil
         fields = ['id','username','email','bio','adress','number','city','country']
