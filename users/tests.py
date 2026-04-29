@@ -48,7 +48,7 @@ class TestRegister(APITestCase):
             "password":"0123456789"
         }
 
-        response = self.client.post(self.register,data,rformat='json')
+        response = self.client.post(self.register,data,format='json')
         print(response.data)
         self.assertEqual(response.status_code,status.HTTP_201_CREATED)
 

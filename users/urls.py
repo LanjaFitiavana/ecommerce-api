@@ -10,8 +10,8 @@ router.register(r'profil',Profil,basename='profil')
 
 urlpatterns = [
     path('register/',UserView.as_view(),name = 'register'),
-    path('login',TokenObtainPairView.as_view(),name='login'),
-    path('refresh',TokenRefreshView.as_view(),name='refresh'),
+    path('login/',TokenObtainPairView.as_view(),name='login'),
+    path('refresh/',TokenRefreshView.as_view(),name='refresh'),
     path('list/',ListUser.as_view(),name='list'),
     path('',include(router.urls))
 ]
