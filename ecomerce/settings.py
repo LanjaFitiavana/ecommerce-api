@@ -20,7 +20,6 @@ import os
 load_dotenv()
 
 
-DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 
 
@@ -57,12 +56,14 @@ INSTALLED_APPS = [
     'orders',
     'users',
 
+    'corsheaders',
     'rest_framework',
     'drf_spectacular'
     
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -114,7 +115,9 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'ecomerce.wsgi.application'
-
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",  # React dev
+]
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
